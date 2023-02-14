@@ -43,10 +43,10 @@ jq -r '[.prefixes | .[].ip_prefix] - [.prefixes[] | select(.service=="CLOUDFRONT
 # unify both the IP address ranges
 cat getflix.tmp | aggregate -q >getflix.txt
 #tidy the tempfiles
-curl -s https://purge.jsdelivr.net/gh/QiuSimons/Netflix_IP/NF_only.txt
-curl -s https://purge.jsdelivr.net/gh/QiuSimons/Netflix_IP/getflix.txt
-curl -s https://purge.jsdelivr.net/gh/QiuSimons/Netflix_IP@master/getflix.txt
-curl -s https://purge.jsdelivr.net/gh/QiuSimons/Netflix_IP@master/NF_only.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/NF_only.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/getflix.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@master/getflix.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@master/NF_only.txt
 rm nflix.zip
 rm getflix.tmp
 #rm netflix_ranges.txt
