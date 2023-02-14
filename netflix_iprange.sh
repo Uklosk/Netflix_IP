@@ -44,8 +44,10 @@ jq -r '[.prefixes | .[].ip_prefix] - [.prefixes[] | select(.service=="CLOUDFRONT
 cat getflix.tmp | aggregate -q >getflix.txt
 
 # create openwrt route rules
-while read -r line; do sed "s|__IP__|$line|g" rule_template; done < NF_only.txt > openwrt_route_rules_nf_only.txt
-while read -r line; do sed "s|__IP__|$line|g" rule_template; done < getflix.txt > openwrt_route_rules_all.txt
+counter=0
+while read -r line; do sed "s|__COUNTER__|$line|g" "s|__IP__|$line|g" rule_template $(( counter++ )); done < NF_only.txt > openwrt_route_rules_nf_only.txt
+counter=0
+while read -r line; do sed "s|__COUNTER__|$line|g" "s|__IP__|$line|g" rule_template $(( counter++ )); done < getflix.txt > openwrt_route_rules_all.txt
 
 #tidy the tempfiles
 curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/NF_only.txt
@@ -56,6 +58,7 @@ curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/getflix.txt
 curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/NF_only.txt
 curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/openwrt_route_rules_nf_only.txt
 curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/openwrt_route_rules_all.txt
+
 rm nflix.zip
 rm getflix.tmp
 #rm netflix_ranges.txt
