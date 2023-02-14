@@ -42,11 +42,20 @@ jq -r '[.prefixes | .[].ip_prefix] - [.prefixes[] | select(.service=="CLOUDFRONT
 
 # unify both the IP address ranges
 cat getflix.tmp | aggregate -q >getflix.txt
+
+# create openwrt route rules
+while read -r line; do sed "s|__IP__|$line|g" rule_template; done < NF_only.txt > openwrt_route_rules_nf_only.txt
+while read -r line; do sed "s|__IP__|$line|g" rule_template; done < getflix.txt > openwrt_route_rules_all.txt
+
 #tidy the tempfiles
 curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/NF_only.txt
 curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/getflix.txt
-curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@master/getflix.txt
-curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@master/NF_only.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/openwrt_route_rules_nf_only.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP/openwrt_route_rules_all.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/getflix.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/NF_only.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/openwrt_route_rules_nf_only.txt
+curl -s https://purge.jsdelivr.net/gh/Uklosk/Netflix_IP@main/openwrt_route_rules_all.txt
 rm nflix.zip
 rm getflix.tmp
 #rm netflix_ranges.txt
