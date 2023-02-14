@@ -1,17 +1,16 @@
-# Netflix_IP
+# Netflix IPs and openwrt rules
 
-Netflix及AWS IP合集：
-
-* 免翻墙：
-https://cdn.jsdelivr.net/gh/Uklosk/Netflix_IP@main/getflix.txt
-
-* GitHub默认版本：
-https://raw.githubusercontent.com/Uklosk/Netflix_IP/main/getflix.txt
-
-Netflix IP合集：
-
-* 免翻墙：
+## IPs
+* JSDelivr:
 https://cdn.jsdelivr.net/gh/Uklosk/Netflix_IP@main/NF_only.txt
 
-* GitHub默认版本：
+* GitHub：
 https://raw.githubusercontent.com/Uklosk/Netflix_IP/main/NF_only.txt
+
+## OpenWRT Rules
+* JSDelivr:
+https://cdn.jsdelivr.net/gh/Uklosk/Netflix_IP@main/openwrt_route_rules_nf_only.txt
+
+* GitHub：
+https://raw.githubusercontent.com/Uklosk/Netflix_IP/main/openwrt_route_rules_nf_only.txt
+

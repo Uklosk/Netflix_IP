@@ -4,7 +4,7 @@
 set -e
 if [ -e getflix.txt ] ; then rm getflix.txt ; fi
 curl -s https://nflx.ksc91u.info/as-nflx > auxfile.txt
-grep -Eo "([0-9.]+){4}/[0-9]+" auxfile.txt > getflix.txt
+grep -Eo "([0-9.]+){4}/[0-9]+" auxfile.txt > getflix.tmp
 
 # Netflix only IP address ranges
 cat getflix.tmp | aggregate -q >NF_only.txt
