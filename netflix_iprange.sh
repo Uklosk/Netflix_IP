@@ -46,12 +46,12 @@ cat getflix.tmp | aggregate -q >getflix.txt
 # create openwrt route rules
 counter=0
 while read -r line; do
-    sed "s|__COUNTER__|$line|g;s|__IP__|$line|g" rule_template
+    sed "s|__COUNTER__|$counter|g;s|__IP__|$line|g" rule_template
     (( counter=counter+1 ))
 done < NF_only.txt > openwrt_route_rules_nf_only.txt
 counter=0
 while read -r line; do
-    sed "s|__COUNTER__|$line|g;s|__IP__|$line|g" rule_template
+    sed "s|__COUNTER__|$counter|g;s|__IP__|$line|g" rule_template
     (( counter=counter+1 ))
 done < getflix.txt > openwrt_route_rules_all.txt
 
