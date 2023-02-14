@@ -1,4 +1,4 @@
-config rule 'netflix-rule__COUNTER__'
+config rule 'netflix_rule__COUNTER__'
         option in 'lan'
         option out 'wg0'
         option dest '__IP__'
