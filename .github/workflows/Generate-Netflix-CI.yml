@@ -43,8 +43,8 @@ jobs:
       
     - name: Commit file
       run: |
-        git config --global user.email simonsqiu@foxmail.com
-        git config --global user.name SimonsQiu
+        git config --global user.email uklosk@jmga.dev
+        git config --global user.name Uklosk
         git add .
         git commit -m "Update `date +%Y/%m/%d\ %H:%M:%S\ %Z`" -a
         
@@ -52,6 +52,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{secrets.GITHUB_TOKEN}}
+        branch: ${{ github.ref }}
           
     - name: Cleanup Workflow Logs
       uses: Mattraks/delete-workflow-runs@main
