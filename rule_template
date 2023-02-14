@@ -1,0 +1,6 @@
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '__IP__'
+        option lookup 'main'
+
