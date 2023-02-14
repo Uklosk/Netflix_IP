@@ -1,0 +1,180 @@
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '8.41.4.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '23.23.189.144/28'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '23.246.0.0/18'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '34.195.253.0/25'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '34.210.42.111/32'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '37.77.184.0/21'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '38.72.126.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '45.57.0.0/17'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '52.24.178.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '52.35.140.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '52.89.124.203/32'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '54.148.37.5/32'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '54.204.25.0/28'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '54.213.167.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '64.120.128.0/17'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '66.197.128.0/17'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '69.53.224.0/19'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '103.87.204.0/22'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '108.175.32.0/20'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '185.2.220.0/22'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '185.9.188.0/22'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '192.173.64.0/18'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '198.38.96.0/19'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '198.45.48.0/20'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '203.75.84.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '203.198.13.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '203.198.80.0/24'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '207.45.72.0/22'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '208.75.76.0/22'
+        option lookup 'main'
+
+config rule
+        option in 'lan'
+        option out 'wg0'
+        option dest '210.0.153.0/24'
+        option lookup 'main'
+
